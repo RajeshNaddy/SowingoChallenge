@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relativeImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginEnd="10dp">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@id/tvProductDec"
+            android:layout_alignBottom="@+id/tvProductDec"
+            android:layout_marginLeft="16px"
+            android:layout_marginTop="20px"
+            android:background="#F0F2F5">
+
+            <ImageView
+                android:id="@+id/ivProductImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bg_image" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/btnFavourite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4px"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/add_fav"
+            app:backgroundTint="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tvProductDec"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginStart="12px"
+            android:layout_marginTop="20px"
+            android:layout_marginEnd="16px"
+            android:layout_toEndOf="@+id/frame"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:padding="5dp"
+            android:text="Title of product occupying many lines of text to ensure long product titles can fit within the size of this container to show the name"
+            android:textColor="#232f39"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvProductDec"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12px"
+            android:layout_marginEnd="16px"
+            android:layout_marginBottom="8px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDiscountPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$99.99"
+                android:textColor="#232f39"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvActualPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8px"
+                android:text="@string/tvLine_text"
+                android:textColor="#7b8e9d"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:layout_below="@id/relativeImage"
+        android:layout_marginTop="8px"
+        android:background="#7b8e9d" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
